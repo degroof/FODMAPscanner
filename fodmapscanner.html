@@ -200,8 +200,8 @@ const scoreZone = document.getElementById('score-zone');
 //text area with raw OCR text
 const ocrText = document.getElementById('ocr-text');
 
-let isDrawing = false;
-let startX, startY, currentX, currentY;
+let isDrawing = false; //true when dragging selection box
+let startX, startY, currentX, currentY; //coordinates for selection box
 
 // Populate help area
 const helpList = document.getElementById('help-list');
