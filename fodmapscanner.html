@@ -143,7 +143,7 @@
             <canvas id="crop-canvas"></canvas>
         </div>
         
-        <button id="scan-btn" class="btn btn-secondary" style="display: none;">Scan Selected Area</button>
+        <button id="scan-btn" class="btn btn-secondary" style="display: none;">Check Ingredients</button>
     </div>
 
 	
@@ -161,7 +161,7 @@
         </div>
     </div>
 
-    <details>
+    <details id="rawText">
         <summary>Raw Text (paste or edit text if necessary)</summary>
         <textarea id="ocr-text" placeholder="(raw text from scan)"></textarea>
     </details>
@@ -324,7 +324,7 @@
             const text = ret.data.text;
             await worker.terminate();
 
-            statusDiv.textContent = "Done. Adjust selection or view rules down below.";
+            statusDiv.textContent = "Done. Adjust selection or edit the raw text below.";
             scanBtn.disabled = false;
             ocrText.value=text;
             analyzeText(text);
